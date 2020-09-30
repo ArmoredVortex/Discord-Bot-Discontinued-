@@ -29,8 +29,8 @@ module.exports = {
                 message.channel.send('Gg you win')
                 tries = 3;
                 runtime = false;
-            }else if(parseInt(args) < min && parseInt(args)> max){
-                    message.channel.send(`You cant send a no lesser pr greater than the range.`)
+            }else if(parseInt(args) < min || parseInt(args)> max){
+                    message.channel.send(`You cant send a no lesser or greater than the range.`)
             }else if(parseInt(args)!=randomNo){
                 tries -= 1;
                 message.channel.send(`It was a wrong guess you have ${tries} try/tries remaining!`);
